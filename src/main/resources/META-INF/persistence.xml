@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="MyUnit" transaction-type="RESOURCE_LOCAL">
+        <!-- Persistence provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Entity classes -->
+        <class>com.company.Users</class>
+        <class>com.company.Games</class>
+        <class>com.company.Groups</class>
+        <class>com.company.Reviews</class>
+        <class>com.company.Orders</class>
+        <class>com.company.Publishers</class>
+        <class>com.company.Categories</class>
+        <properties>
+            <!-- The JDBC driver of your database -->
+            <property name="javax.persistence.jdbc.driver"
+                      value="oracle.jdbc.driver.OracleDriver" />
+            <!-- The JDBC URL to the database instance -->
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:oracle:thin:@oraas:1521:ora2018" />
+            <!-- The database username -->
+            <property name="javax.persistence.jdbc.user" value="g1_291966" />
+            <!-- The database password -->
+            <property name="javax.persistence.jdbc.password" value="haslobaza" />
+        </properties>
+    </persistence-unit>
+</persistence>
